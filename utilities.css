@@ -1,0 +1,206 @@
+:root {
+  --primary: #c72727;
+  --secondary: #f99500;
+  --dark: #333;
+  --light: #f3f3f3;
+  --max-width: 1100px;
+}
+
+.category {
+  --sports: #f99500;
+  --ent: #a66bbe;
+  --tech: #009cff;
+}
+
+/* DEBUG */
+
+.debug {
+  outline: solid 1px green !important;
+}
+
+/* Layout */
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 1.5rem;
+}
+
+.page-grid>*:first-child {
+  grid-row: 1 / span 3;
+}
+
+/* Divs */
+.container {
+  overflow: hidden;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.category {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: .55rem;
+  padding: .4rem .6rem;
+  border-radius: 15px;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+
+.card {
+  padding: 1rem;
+  background: #fff;
+  opacity: .95;
+}
+
+.card:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.01);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover h3 {
+  color: var(--secondary);
+}
+
+.category-sports {
+  background: var(--sports)
+}
+
+.category-ent {
+  background: var(--ent)
+}
+
+.category-tech {
+  background: var(--tech)
+}
+
+/* Utilities */
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.p-1 {
+  padding: 1.5rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+/* BTN */
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark);
+  color: #fff;
+  padding: .5rem 1.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--dark);
+  color: #fff;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Background */
+
+.bg-primary {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.bg-secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.bg-light {
+  background: var(--light);
+  color: var(--dark);
+}
+
+.bg-dark {
+  background: var(--dark);
+  color: var(--light);
+}
+
+.bg-white {
+  background: #fff;
+  color: #333;
+}
+
+/* List */
+
+
+.list li {
+  border-bottom: 1px dotted #555;
+  width: 80%;
+  padding: .5rem 0;
+}
+
+.list li a {
+  color: #fff;
+}
+
+.list li a:hover {
+  opacity: .8;
+  color: var(--secondary);
+}
+
+/* Meta */
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--light);
+  color: var(--dark);
+  font-size: .8rem;
+  padding: .5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.meta i {
+  margin-right: .3rem;
+}
+
+.meta>div.category {
+  margin: 0;
+}
